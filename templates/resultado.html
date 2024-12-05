@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Resultado do Diagnóstico</title>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Resultado do Diagnóstico</h1>
+        <ul class="list-group">
+            {% for item in protocolo %}
+            <li class="list-group-item">
+                <strong>Padrão de MTC:</strong> {{ item.padrao }}<br>
+                <strong>Ponto Auricular:</strong> {{ item.ponto }}<br>
+                <strong>Função:</strong> {{ item.funcao }}
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="/" class="btn btn-secondary mt-3">Voltar</a>
+    </div>
+</body>
+</html>
